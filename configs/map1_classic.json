@@ -1,0 +1,25 @@
+{
+  "name": "map1_classic",
+  "description": "Map 1 (de) - Windy Grid World kinh dien (Sutton & Barto, Vi du 6.5): 7x10, gio co dinh theo cot",
+  "grid": [
+    "..........",
+    "..........",
+    "..........",
+    "S......G..",
+    "..........",
+    "..........",
+    ".........."
+  ],
+  "wind": [0, 0, 0, 1, 1, 1, 2, 2, 1, 0],
+  "stochastic_wind": false,
+  "anchor_mode": "none",
+  "reward": {"step": -1, "goal": 0, "wall_bump": 0, "anchor_pickup": 0},
+  "gamma": 1.0,
+  "max_steps": 2000,
+  "agent": {
+    "alpha": 0.5, "epsilon": 0.1, "episodes": 300, "eval_episodes": 5,
+    "per_algo": {
+      "mc": {"epsilon": 0.2, "episodes": 3000}
+    }
+  }
+}

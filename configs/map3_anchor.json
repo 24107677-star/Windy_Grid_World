@@ -1,0 +1,31 @@
+{
+  "name": "map3_anchor",
+  "description": "Map 3 (kho) - map 12x16, gio ngau nhien, 2 o neo (A). Goal nam trong cot gio manh nen neo rat co gia tri.",
+  "grid": [
+    "................",
+    "................",
+    "......#.........",
+    "......#.....#...",
+    "..A...#.....#...",
+    "......#.....#...",
+    "S.....#.....#G..",
+    "......#.....#...",
+    "............#...",
+    "..........A.#...",
+    "................",
+    "................"
+  ],
+  "wind": [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 1, 1, 0, 2, 2, 0],
+  "stochastic_wind": true,
+  "noise_on_calm": false,
+  "anchor_mode": "manual",
+  "reward": {"step": -1, "goal": 0, "wall_bump": 0, "anchor_pickup": 0},
+  "gamma": 1.0,
+  "max_steps": 3000,
+  "agent": {
+    "alpha": 0.2, "epsilon": 0.1, "episodes": 8000, "eval_episodes": 100,
+    "per_algo": {
+      "mc": {"epsilon": 0.2, "episodes": 3000, "n_seeds": 3}
+    }
+  }
+}

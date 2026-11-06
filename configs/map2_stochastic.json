@@ -1,0 +1,29 @@
+{
+  "name": "map2_stochastic",
+  "description": "Map 2 (trung binh) - map lon 10x14 co tuong, gio 0-2 o, gio ngau nhien: cuong do thuc te = danh dinh +-1",
+  "grid": [
+    "..............",
+    "..............",
+    "....#.........",
+    "....#....#....",
+    "....#....#....",
+    "S...#....#.G..",
+    "....#....#....",
+    ".........#....",
+    "..............",
+    ".............."
+  ],
+  "wind": [0, 0, 0, 1, 1, 1, 2, 2, 2, 1, 1, 2, 0, 0],
+  "stochastic_wind": true,
+  "noise_on_calm": false,
+  "anchor_mode": "none",
+  "reward": {"step": -1, "goal": 0, "wall_bump": 0, "anchor_pickup": 0},
+  "gamma": 1.0,
+  "max_steps": 2000,
+  "agent": {
+    "alpha": 0.1, "epsilon": 0.1, "episodes": 3000, "eval_episodes": 100,
+    "per_algo": {
+      "mc": {"epsilon": 0.2, "episodes": 5000}
+    }
+  }
+}
